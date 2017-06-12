@@ -27,3 +27,17 @@ block content
             +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
             +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
             +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+            
+    section.section.contact
+        .container
+            h2.title Entre em contato
+            p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
+            form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
+                .input-field
+                    input(type='text', name='name', placeholder='Nome')
+                .input-field
+                    input(type='email', name='_replyto', placeholder='Email')
+                .input-field
+                    textarea(name='message', placeholder='Sua mensagem')
+                .input-field
+                    input(type='submit')
