@@ -1,0 +1,28 @@
+extends templates/template.pug
+
+//- Mixins
+mixin projectItem(url, img, title, text)
+    .col-xs-12.col-md
+        .project-item
+            a.project-link(href= url)
+                img.project-img(src= img, alt='')
+                //- .project-details Nome
+            p= title
+            p= text
+
+block content
+    include templates/header.pug
+                        
+    section.section.myself
+        .container
+            h2.title Um pouco sobre mim
+            p Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.
+        
+    section.section.projects
+        .container
+            h2.title Meus projetos recentes
+        .row.projects-row
+            +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+            +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
+            +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
+            +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')

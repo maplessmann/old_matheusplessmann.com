@@ -1,0 +1,113 @@
+//////////
+// VARS //
+//////////
+@import common/variables.sass
+
+////////////
+// MIXINS //
+////////////
+@import common/mixins.sass
+
+////////////////
+// COMPONENTS //
+////////////////
+@import common/components.sass
+
+/////////////
+// CONTENT //
+/////////////
+*
+    box-sizing: border-box
+
+body
+    font-family: 'Open Sans', sans-serif
+    color: #333
+
+img
+    max-width: 100%
+    height: auto
+    vertical-align: middle
+
+a
+    color: $color-link
+    text-decoration: none
+    transition: .2s
+
+    &:hover
+        color: lighten($color-link, 10%)
+
+.section
+    padding: 2rem 0
+
+// Header
+.header
+    padding: 2rem 0
+
+    .container
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-wrap: wrap
+
+    &-logo
+        color: #333
+        font-size: 1.5rem
+        font-weight: 300
+
+        &:hover
+            color: lighten(#333, 30%)
+
+    &-navbar
+        margin-top: 1.5rem
+
+    &-menu
+        display: flex
+        margin: 0
+        padding: 0
+
+        &-item
+            list-style: none
+
+            & + &
+                margin-left: 2rem
+
+        &-link
+            color: #333
+
+            &:hover
+                color: lighten(#333, 20%)
+
+
+@media only screen and (min-width: 48em)
+    .header .container
+        justify-content: space-between
+
+
+// Projects
+.projects
+    &-row
+        margin: 0
+
+    .project-link
+        display: block
+        position: relative
+
+    .project-details
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: auto
+        background-color: rgba(0,0,0,.4)
+        color: #fff
+        padding: 1rem
+
+
+
+@media only screen and(max-width: 48em)
+    .container
+        width: 88%
+
+@media only screen and (min-width: 75em)
+    .container
+        width: 64em

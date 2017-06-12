@@ -1,0 +1,122 @@
+.btn {
+  background-color: #62c380;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1;
+  height: auto;
+  padding: .7rem 2rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: .4rem;
+  -webkit-transition: .3s ease;
+  -o-transition: .3s ease;
+  transition: .3s ease; }
+
+.btn:hover {
+  background-color: #87d19e;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle; }
+
+a {
+  color: #2d6ca2;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+
+a:hover {
+  color: #3a86c8; }
+
+.section {
+  padding: 2rem 0; }
+
+.header {
+  padding: 2rem 0; }
+
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.header-logo {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 300; }
+
+.header-logo:hover {
+  color: gray; }
+
+.header-navbar {
+  margin-top: 1.5rem; }
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0; }
+
+.header-menu-item {
+  list-style: none; }
+
+.header-menu-item + .header-menu-item {
+  margin-left: 2rem; }
+
+.header-menu-link {
+  color: #333; }
+
+.header-menu-link:hover {
+  color: #666666; }
+
+@media only screen and (min-width: 48em) {
+  .header .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+.projects-row {
+  margin: 0; }
+
+.projects .project-link {
+  display: block;
+  position: relative; }
+
+.projects .project-details {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 1rem; }
+
+@media only screen and (max-width: 48em) {
+  .container {
+    width: 88%; } }
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 64em; } }
