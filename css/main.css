@@ -24,7 +24,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  color: #333; }
+  color: #5d5d5d; }
 
 img {
   max-width: 100%;
@@ -103,15 +103,11 @@ a:hover {
   display: block;
   position: relative; }
 
-.projects .project-details {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
-  padding: 1rem; }
+.projects .project-link .project-img {
+  border-radius: .4rem; }
+
+.projects .project-title {
+  font-weight: 600; }
 
 @media only screen and (max-width: 48em) {
   .container {

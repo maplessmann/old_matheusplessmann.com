@@ -7,8 +7,8 @@ mixin projectItem(url, img, title, text)
             a.project-link(href= url)
                 img.project-img(src= img, alt='')
                 //- .project-details Nome
-            p= title
-            p= text
+            p.project-title= title
+            p.project-text= text
 
 block content
     include templates/header.pug
@@ -17,6 +17,7 @@ block content
         .container
             h2.title Um pouco sobre mim
             p Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.
+            p Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM
         
     section.section.projects
         .container
