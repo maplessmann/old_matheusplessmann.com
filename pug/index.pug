@@ -1,4 +1,4 @@
-extends templates/template.pug
+extends includes/template.pug
 
 //- Mixins
 mixin projectItem(url, img, title, text)
@@ -11,7 +11,7 @@ mixin projectItem(url, img, title, text)
             p.project-text= text
 
 block content
-    include templates/header.pug
+    include includes/header.pug
                         
     section.section.myself
         .container

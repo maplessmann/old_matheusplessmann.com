@@ -68,6 +68,9 @@ a:hover {
 .header-logo:hover {
   color: gray; }
 
+.header-logo img {
+  width: 3rem; }
+
 .header-navbar {
   margin-top: 1.5rem; }
 
