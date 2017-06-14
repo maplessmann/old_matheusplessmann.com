@@ -12,32 +12,46 @@ mixin projectItem(url, img, title, text)
 
 block content
     include includes/header.pug
-                        
-    section.section.myself
+    
+    main.content
         .container
-            h2.title Um pouco sobre mim
-            p Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.
-            p Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM
-        
-    section.section.projects
-        .container
-            h2.title Meus projetos recentes
-        .row.projects-row
-            +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
-            +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
-            +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
-            +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+            nav.navbar
+                ul.navbar-menu
+                    li.navbar-menu-item
+                        a.navbar-menu-link(href='#') Eu
+                    li.navbar-menu-item
+                        a.navbar-menu-link(href='#') Projetos recentes
+                    li.navbar-menu-item
+                        a.navbar-menu-link(href='#') Contato
             
-    section.section.contact
-        .container
-            h2.title Entre em contato
-            p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
-            form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
-                .input-field
-                    input(type='text', name='name', placeholder='Nome')
-                .input-field
-                    input(type='email', name='_replyto', placeholder='Email')
-                .input-field
-                    textarea(name='message', placeholder='Sua mensagem')
-                .input-field
-                    input(type='submit')
+            section.section.myself
+                h2.title Um pouco sobre mim
+                p Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.
+                p Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM
+                
+            section.section.projects
+                h2.title Meus projetos recentes
+                .row.projects-row
+                    +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+                    
+            section.section.contact
+                h2.title Entre em contato
+                p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
+                form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
+                    .input-field
+                        input(type='text', name='name', placeholder='Nome')
+                    .input-field
+                        input(type='email', name='_replyto', placeholder='Email')
+                    .input-field
+                        textarea(name='message', placeholder='Sua mensagem')
+                    .input-field
+                        input(type='submit')
+            
+            section.section.icons
+                i.fa.fa-github
+                i.fa.fa-linkedin-square
+                i.fa.fa-codepen
+                i.fa.fa-telegram

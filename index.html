@@ -14,77 +14,76 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/libs/flexboxgrid.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
   </head>
-  <body>
+  <body class="flex-wrapper">
     <header class="header">
-      <div class="container"><a class="header-logo" href="#"><img src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann"></a>
-        <nav class="header-navbar">
-          <ul class="header-menu">
-            <li class="header-menu-item"><a class="header-menu-link" href="#">Eu</a></li>
-            <li class="header-menu-item"><a class="header-menu-link" href="#">Projetos recentes</a></li>
-            <li class="header-menu-item"><a class="header-menu-link" href="#">Contato</a></li>
+      <div class="header-fixed"><a class="header-logo" href="#"><img src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann"></a></div>
+    </header>
+    <main class="content">
+      <div class="container">
+        <nav class="navbar">
+          <ul class="navbar-menu">
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Eu</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Projetos recentes</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Contato</a></li>
           </ul>
         </nav>
+        <section class="section myself">
+          <h2 class="title">Um pouco sobre mim</h2>
+          <p>Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.</p>
+          <p>Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM</p>
+        </section>
+        <section class="section projects">
+          <h2 class="title">Meus projetos recentes</h2>
+          <div class="row projects-row">
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section contact">
+          <h2 class="title">Entre em contato</h2>
+          <p>Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.</p>
+          <form action="https://formspree.io/maplessmann@gmail.com" method="POST">
+            <div class="input-field">
+              <input type="text" name="name" placeholder="Nome">
+            </div>
+            <div class="input-field">
+              <input type="email" name="_replyto" placeholder="Email">
+            </div>
+            <div class="input-field">
+              <textarea name="message" placeholder="Sua mensagem"></textarea>
+            </div>
+            <div class="input-field">
+              <input type="submit">
+            </div>
+          </form>
+        </section>
+        <section class="section icons"><i class="fa fa-github"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-codepen"></i><i class="fa fa-telegram"></i></section>
       </div>
-    </header>
-    <section class="section myself">
-      <div class="container">
-        <h2 class="title">Um pouco sobre mim</h2>
-        <p>Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.</p>
-        <p>Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM</p>
-      </div>
-    </section>
-    <section class="section projects">
-      <div class="container">
-        <h2 class="title">Meus projetos recentes</h2>
-      </div>
-      <div class="row projects-row">
-        <div class="col-xs-12 col-md">
-          <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
-            <p class="project-title">Título</p>
-            <p class="project-text">Texto</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md">
-          <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
-            <p class="project-title">Título</p>
-            <p class="project-text">Texto</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md">
-          <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
-            <p class="project-title">Título</p>
-            <p class="project-text">Texto</p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md">
-          <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
-            <p class="project-title">Título</p>
-            <p class="project-text">Texto</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section contact">
-      <div class="container">
-        <h2 class="title">Entre em contato</h2>
-        <p>Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.</p>
-        <form action="https://formspree.io/maplessmann@gmail.com" method="POST">
-          <div class="input-field">
-            <input type="text" name="name" placeholder="Nome">
-          </div>
-          <div class="input-field">
-            <input type="email" name="_replyto" placeholder="Email">
-          </div>
-          <div class="input-field">
-            <textarea name="message" placeholder="Sua mensagem"></textarea>
-          </div>
-          <div class="input-field">
-            <input type="submit">
-          </div>
-        </form>
-      </div>
-    </section>
+    </main>
     <script src="js/main.js"></script>
   </body>
 </html>

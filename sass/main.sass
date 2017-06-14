@@ -14,28 +14,25 @@
 @import common/components.sass
 
 /////////////
+// GLOBAL //
+/////////////
+@import common/global.sass
+
+/////////////
 // CONTENT //
 /////////////
-*
-    box-sizing: border-box
+@media only screen and (min-width: 48em)
+    .flex-wrapper
+        display: flex
+        flex-wrap: wrap
 
-body
-    font-family: 'Open Sans', sans-serif
-    color: #5d5d5d
-    // color: $color-text
+        .header
+            flex-basis: 30%
+            max-width: 30%
 
-img
-    max-width: 100%
-    height: auto
-    vertical-align: middle
-
-a
-    color: $color-link
-    text-decoration: none
-    transition: .2s
-
-    &:hover
-        color: lighten($color-link, 10%)
+        .content
+            flex-basis: 70%
+            max-width: 70%
 
 .section
     padding: 2rem 0
@@ -44,9 +41,16 @@ a
     // color: $color-title
 
 
-// Header
+////////////
+// Header //
+////////////
 .header
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     padding: 2rem 0
+    background-color: #efefef
+    +background-image('../images/header-bg.jpg', #efefef)
 
     .container
         display: flex
@@ -65,8 +69,15 @@ a
         img
             width: 3rem
 
-    &-navbar
-        margin-top: 1.5rem
+
+
+////////////
+// Main //
+////////////
+
+
+.navbar
+    margin-top: 1.5rem
 
     &-menu
         display: flex
@@ -84,11 +95,6 @@ a
 
             &:hover
                 color: lighten(#333, 20%)
-
-
-@media only screen and (min-width: 48em)
-    .header .container
-        justify-content: space-between
 
 
 // Projects
@@ -125,6 +131,10 @@ a
     .container
         width: 88%
 
+@media only screen and (min-width: 64em)
+    .container
+        width: 44em
+
 @media only screen and (min-width: 75em)
     .container
-        width: 64em
+        width: 52em
