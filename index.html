@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,20 +10,25 @@
     <meta property="og:description" content="Desenvolvedor Front End, amante de CSS e UX!">
     <meta property="og:image" content="img/banner.png">
     <title>Matheus Plessmann | Desenvolvedor Front End</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800,800i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/libs/flexboxgrid.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
   </head>
   <body class="flex-wrapper">
     <header class="header">
-      <div class="header-fixed"><a class="header-logo" href="#"><img src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann"></a></div>
+      <div class="header-fixed"><a class="header-logo" href="#"><img class="header-logo-img" src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann">
+          <div class="header-name"><span class="first-name">Matheus</span>Plessmann</div></a>
+        <div class="header-social"><a class="header-social-link fa fa-github" href="https://github.com/maplessmann" target="_blank"></a><a class="header-social-link fa fa-linkedin-square" href="https://www.linkedin.com/in/matheus-plessmann-329283a0" target="_blank"></a><a class="header-social-link fa fa-codepen" href="https://codepen.io/maplessmann/" target="_blank"></a><a class="header-social-link fa fa-telegram" href="https://telegram.me/maplessmann" target="_blank"></a></div>
+      </div>
     </header>
     <main class="content">
       <div class="container">
         <nav class="navbar">
-          <ul class="navbar-menu">
+          <ul class="navbar-menu center-xs end-sm">
             <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Eu</a></li>
             <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Projetos recentes</a></li>
             <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Contato</a></li>
@@ -31,7 +36,7 @@
         </nav>
         <section class="section myself">
           <h2 class="title">Um pouco sobre mim</h2>
-          <p>Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.</p>
+          <p>Oi, meu nome é Matheus Plessmann de Oliveira. Sou um Desenvolvedor Front End que ama criar coisas.</p>
           <p>Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM</p>
         </section>
         <section class="section projects">
@@ -43,6 +48,20 @@
                 <p class="project-text">Texto</p>
               </div>
             </div>
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md">
+              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
+                <p class="project-title">Título</p>
+                <p class="project-text">Texto</p>
+              </div>
+            </div>
+          </div>
+          <div class="row projects-row">
             <div class="col-xs-12 col-md">
               <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
                 <p class="project-title">Título</p>
@@ -81,7 +100,6 @@
             </div>
           </form>
         </section>
-        <section class="section icons"><i class="fa fa-github"></i><i class="fa fa-linkedin-square"></i><i class="fa fa-codepen"></i><i class="fa fa-telegram"></i></section>
       </div>
     </main>
     <script src="js/main.js"></script>

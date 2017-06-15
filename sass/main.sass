@@ -3,24 +3,71 @@
 //////////
 @import common/variables.sass
 
+
 ////////////
 // MIXINS //
 ////////////
 @import common/mixins.sass
+
 
 ////////////////
 // COMPONENTS //
 ////////////////
 @import common/components.sass
 
+
 /////////////
 // GLOBAL //
 /////////////
 @import common/global.sass
 
-/////////////
-// CONTENT //
-/////////////
+
+////////////
+// HEADER //
+////////////
+.header
+    text-align: center
+    flex-basis: 100%
+    max-width: 100%
+    width: 100%
+
+    &-fixed
+        flex-basis: 100%
+        max-width: 100%
+        padding: 2rem
+        +background-image('../images/header-bg.jpg', #efefef)
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: space-between
+
+    &-logo
+
+        &-img
+            width: 4rem
+
+    &-name
+        color: #565656
+        font-size: 1.2rem
+        font-style: italic
+        text-transform: uppercase
+        margin-top: 1rem
+
+        .first-name
+            color: $color-blue
+            font-weight: 800
+
+    &-social
+        display: flex
+        justify-content: center
+        margin-top: 2rem
+
+        &-link
+            color: #353535
+            font-size: 1.4rem
+            padding: 0 1rem
+
+
 @media only screen and (min-width: 48em)
     .flex-wrapper
         display: flex
@@ -29,58 +76,47 @@
         .header
             flex-basis: 30%
             max-width: 30%
+            width: 30%
+            height: 100vh
+
+            &-fixed
+                position: fixed
+                width: inherit
+                height: inherit
+                padding: 4rem 2rem
+
+            &-social-link
+                color: #eee
 
         .content
             flex-basis: 70%
             max-width: 70%
 
+
+
+/////////////
+// CONTENT //
+/////////////
+.container
+    width: 88%
+
 .section
     padding: 2rem 0
 
 .title
-    // color: $color-title
+    margin: 0 0 1rem
 
 
-////////////
-// Header //
-////////////
-.header
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    padding: 2rem 0
-    background-color: #efefef
-    +background-image('../images/header-bg.jpg', #efefef)
-
-    .container
-        display: flex
-        justify-content: center
-        align-items: center
-        flex-wrap: wrap
-
-    &-logo
-        color: #333
-        font-size: 1.5rem
-        font-weight: 300
-
-        &:hover
-            color: lighten(#333, 30%)
-
-        img
-            width: 3rem
-
-
-
-////////////
-// Main //
-////////////
-
-
+// Navbar
 .navbar
-    margin-top: 1.5rem
+    padding: 3rem 0
+
+    & + .section
+        padding-top: 0
 
     &-menu
         display: flex
+        // justify-content: flex-end
         margin: 0
         padding: 0
 
@@ -124,17 +160,3 @@
         background-color: rgba(0,0,0,.4)
         color: #fff
         padding: 1rem
-
-
-
-@media only screen and(max-width: 48em)
-    .container
-        width: 88%
-
-@media only screen and (min-width: 64em)
-    .container
-        width: 44em
-
-@media only screen and (min-width: 75em)
-    .container
-        width: 52em

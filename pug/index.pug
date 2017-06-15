@@ -16,7 +16,7 @@ block content
     main.content
         .container
             nav.navbar
-                ul.navbar-menu
+                ul.navbar-menu.center-xs.end-sm
                     li.navbar-menu-item
                         a.navbar-menu-link(href='#') Eu
                     li.navbar-menu-item
@@ -26,13 +26,16 @@ block content
             
             section.section.myself
                 h2.title Um pouco sobre mim
-                p Meu nome é Matheus Plessmann de Oliveira. Atuo como Desenvolvedor Front End.
+                p Oi, meu nome é Matheus Plessmann de Oliveira. Sou um Desenvolvedor Front End que ama criar coisas.
                 p Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM
                 
             section.section.projects
                 h2.title Meus projetos recentes
                 .row.projects-row
                     +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
+                .row.projects-row
                     +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
@@ -49,9 +52,3 @@ block content
                         textarea(name='message', placeholder='Sua mensagem')
                     .input-field
                         input(type='submit')
-            
-            section.section.icons
-                i.fa.fa-github
-                i.fa.fa-linkedin-square
-                i.fa.fa-codepen
-                i.fa.fa-telegram
