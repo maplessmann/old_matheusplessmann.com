@@ -22,7 +22,7 @@ gulp.task('pug-watch', ['pug'], function() {
 // SASS //
 //////////
 gulp.task('sass', function() {
-    return gulp.src('./sass/*.sass')
+    return gulp.src('./sass/main.sass')
         .pipe(sass())
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
@@ -31,7 +31,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./css'));
 });
 gulp.task('sass-watch', ['sass'], function() {
-    gulp.watch('./sass/*.sass', ['sass'])
+    gulp.watch('./sass/**/*.sass', ['sass'])
 });
 
 // Default task

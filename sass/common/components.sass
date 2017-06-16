@@ -1,16 +1,81 @@
+// Tooltip
+.tooltip
+    position: relative
+
+    &:hover
+
+        &::after
+            content: attr(data-tooltip)
+            position: absolute
+            bottom: 2.2rem
+            left: 50%
+            transform: translateX(-50%)
+            background-color: rgba(255,255,255,.5)
+            // box-shadow: 1px 1px 10px rgba(0,0,0,.2)
+            box-shadow: 0px 8px 15px -6px rgba(0,0,0,.2)
+            color: rgba(0,0,0,.7)
+            font-family: 'Open Sans', sans-serif
+            font-size: .8rem
+            padding: .5rem 1rem
+            animation: slideUpTooltip .8s
+
+@keyframes slideUpTooltip
+    0%
+        opacity: 0
+        transform: translate(-50%, 1rem)
+    60%
+        opacity: 0
+        transform: translate(-50%, 1rem)
+    100%
+        opacity: 1
+        transform: translate(-50%, 0)
+
 // Button
 .btn
     background-color: $color-btn
     color: #fff
-    font-size: 1rem
-    font-weight: 500
     line-height: 1.1
-    height: auto
     padding: .7rem 2rem
-    box-shadow: none
-    border-radius: .4rem
+    border-radius: .2rem
+    border: 0
     transition: .3s ease
+    cursor: pointer
 
     &:hover
         background-color: lighten($color-btn, 10%)
         box-shadow: none
+
+
+// Form
+textarea
+    resize: vertical
+    touch-action: manipulation
+    min-height: 10rem
+
+input:not([type]),
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+textarea
+    display: block
+    background-color: #f3f3f3
+    border-radius: .2rem
+    border: 1px solid transparent
+    padding: .8rem 1rem
+    width: 100%
+
+    &:focus
+        outline: none
+        border-color: transparentize($color-blue, .6)
+        // box-shadow: 0 0 5px transparentize($color-blue, .4)
+
+.input-field
+    margin-bottom: 1rem

@@ -4,11 +4,12 @@ extends includes/template.pug
 mixin projectItem(url, img, title, text)
     .col-xs-12.col-md
         .project-item
-            a.project-link(href= url)
-                img.project-img(src= img, alt='')
-                //- .project-details Nome
-            p.project-title= title
-            p.project-text= text
+            figure
+                a.project-link(href= url)
+                    img.project-img(src= img, alt='')
+                figcaption
+                    p.project-title= title
+                    p.project-text= text
 
 block content
     include includes/header.pug
@@ -43,12 +44,44 @@ block content
             section.section.contact
                 h2.title Entre em contato
                 p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
-                form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
-                    .input-field
-                        input(type='text', name='name', placeholder='Nome')
-                    .input-field
-                        input(type='email', name='_replyto', placeholder='Email')
-                    .input-field
-                        textarea(name='message', placeholder='Sua mensagem')
-                    .input-field
-                        input(type='submit')
+                .row
+                    .col-xs-12.col-md-7
+                        form.row(action='https://formspree.io/maplessmann@gmail.com', method='POST')
+                            .input-field.col-xs-12.col-md
+                                input(type='text', name='name', placeholder='Nome')
+                            .input-field.col-xs-12.col-md
+                                input(type='email', name='_replyto', placeholder='Email')
+                            .input-field.col-xs-12
+                                textarea(name='message', placeholder='Sua mensagem')
+                            .input-field.col-xs-12
+                                input.btn(type='submit')
+                            
+                    .col-xs-12.col-md-5
+                        i.fa.fa-envelope
+                        |
+                        |
+                        a(href='mailto:maplessmann@gmail.com', target='_blank') Me mande um e-mail
+                        br
+                        i.fa.fa-telegram
+                        |
+                        |
+                        a(href='mailto:maplessmann@gmail.com', target='_blank') Me chame no Telegram
+
+
+            footer.footer
+                p
+                    small
+                        | Site criado com muito
+                        |
+                        i.fa.fa-heart
+                        |
+                        | e café.
+                    br
+                    small
+                        i.fa.fa-code
+                        |
+                        | disponível no
+                        |
+                        a(href='https://github.com/maplessmann/personal-website', target='_blank') Github
+                        | .
+                    

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#555">
+    <meta name="theme-color" content="#6191bf">
     <meta property="og:url" content="http://matheusplessmann.com">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Matheus Plessmann | Desenvolvedor Front End">
@@ -22,7 +22,7 @@
     <header class="header">
       <div class="header-fixed"><a class="header-logo" href="#"><img class="header-logo-img" src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann">
           <div class="header-name"><span class="first-name">Matheus</span>Plessmann</div></a>
-        <div class="header-social"><a class="header-social-link fa fa-github" href="https://github.com/maplessmann" target="_blank"></a><a class="header-social-link fa fa-linkedin-square" href="https://www.linkedin.com/in/matheus-plessmann-329283a0" target="_blank"></a><a class="header-social-link fa fa-codepen" href="https://codepen.io/maplessmann/" target="_blank"></a><a class="header-social-link fa fa-telegram" href="https://telegram.me/maplessmann" target="_blank"></a></div>
+        <div class="header-social"><a class="header-social-link fa fa-github tooltip" href="https://github.com/maplessmann" target="_blank" data-tooltip="Github"></a><a class="header-social-link fa fa-linkedin-square tooltip" href="https://www.linkedin.com/in/matheus-plessmann-329283a0" target="_blank" data-tooltip="Linkedin"></a><a class="header-social-link fa fa-codepen tooltip" href="https://codepen.io/maplessmann/" target="_blank" data-tooltip="Codepen"></a><a class="header-social-link fa fa-telegram tooltip" href="https://telegram.me/maplessmann" target="_blank" data-tooltip="Telegram"></a></div>
       </div>
     </header>
     <main class="content">
@@ -43,41 +43,65 @@
           <h2 class="title">Meus projetos recentes</h2>
           <div class="row projects-row">
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
           <div class="row projects-row">
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
             <div class="col-xs-12 col-md">
-              <div class="project-item"><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
-                <p class="project-title">Título</p>
-                <p class="project-text">Texto</p>
+              <div class="project-item">
+                <figure><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
+                  <figcaption>
+                    <p class="project-title">Título</p>
+                    <p class="project-text">Texto</p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -85,21 +109,37 @@
         <section class="section contact">
           <h2 class="title">Entre em contato</h2>
           <p>Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.</p>
-          <form action="https://formspree.io/maplessmann@gmail.com" method="POST">
-            <div class="input-field">
-              <input type="text" name="name" placeholder="Nome">
+          <div class="row">
+            <div class="col-xs-12 col-md-7">
+              <form class="row" action="https://formspree.io/maplessmann@gmail.com" method="POST">
+                <div class="input-field col-xs-12 col-md">
+                  <input type="text" name="name" placeholder="Nome">
+                </div>
+                <div class="input-field col-xs-12 col-md">
+                  <input type="email" name="_replyto" placeholder="Email">
+                </div>
+                <div class="input-field col-xs-12">
+                  <textarea name="message" placeholder="Sua mensagem"></textarea>
+                </div>
+                <div class="input-field col-xs-12">
+                  <input class="btn" type="submit">
+                </div>
+              </form>
             </div>
-            <div class="input-field">
-              <input type="email" name="_replyto" placeholder="Email">
+            <div class="col-xs-12 col-md-5"><i class="fa fa-envelope"></i>
+              <a href="mailto:maplessmann@gmail.com" target="_blank">Me mande um e-mail</a><br><i class="fa fa-telegram"></i>
+              <a href="mailto:maplessmann@gmail.com" target="_blank">Me chame no Telegram</a>
             </div>
-            <div class="input-field">
-              <textarea name="message" placeholder="Sua mensagem"></textarea>
-            </div>
-            <div class="input-field">
-              <input type="submit">
-            </div>
-          </form>
+          </div>
         </section>
+        <footer class="footer">
+          <p><small>
+              Site criado com muito
+              <i class="fa fa-heart"></i>
+              e café.</small><br><small><i class="fa fa-code"></i>
+              disponível no
+              <a href="https://github.com/maplessmann/personal-website" target="_blank">Github</a>.</small></p>
+        </footer>
       </div>
     </main>
     <script src="js/main.js"></script>

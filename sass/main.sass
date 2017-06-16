@@ -10,16 +10,16 @@
 @import common/mixins.sass
 
 
-////////////////
-// COMPONENTS //
-////////////////
-@import common/components.sass
-
-
 /////////////
 // GLOBAL //
 /////////////
 @import common/global.sass
+
+
+////////////////
+// COMPONENTS //
+////////////////
+@import common/components.sass
 
 
 ////////////
@@ -38,13 +38,21 @@
         +background-image('../images/header-bg.jpg', #efefef)
         display: flex
         flex-wrap: wrap
+        align-items: center
         flex-direction: column
         justify-content: space-between
 
     &-logo
+        transition: 2s
+        animation-name: slideUp
+        animation-duration: 2s
 
         &-img
             width: 4rem
+
+        &:hover
+            opacity: .5
+            filter: blur(3rem)
 
     &-name
         color: #565656
@@ -58,14 +66,24 @@
             font-weight: 800
 
     &-social
-        display: flex
-        justify-content: center
         margin-top: 2rem
+
+        &:hover &-link
+            opacity: .5
+            filter: blur(.2rem)
+
 
         &-link
             color: #353535
-            font-size: 1.4rem
-            padding: 0 1rem
+            font-size: 1.5rem
+            margin: 0 1rem
+            transition: .3s ease
+            animation-name: blurApear
+            animation-duration: 2s
+
+            .header-social:hover &:hover
+                opacity: 1
+                filter: blur(0)
 
 
 @media only screen and (min-width: 48em)
@@ -92,6 +110,22 @@
             flex-basis: 70%
             max-width: 70%
 
+@keyframes slideUp
+    0%
+        opacity: 0
+        transform: translateY(2rem)
+    20%
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes blurApear
+    0%
+        filter: blur(3rem)
+    100%
+        filter: blur(0)
+
 
 
 /////////////
@@ -116,7 +150,6 @@
 
     &-menu
         display: flex
-        // justify-content: flex-end
         margin: 0
         padding: 0
 
@@ -160,3 +193,7 @@
         background-color: rgba(0,0,0,.4)
         color: #fff
         padding: 1rem
+
+
+// Contact
+.contact
