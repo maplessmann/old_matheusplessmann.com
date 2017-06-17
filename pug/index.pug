@@ -2,7 +2,7 @@ extends includes/template.pug
 
 //- Mixins
 mixin projectItem(url, img, title, text)
-    .col-xs-12.col-md
+    .col-xs-12.col-sm-6.col-md-4
         .project-item
             figure
                 a.project-link(href= url)
@@ -19,16 +19,28 @@ block content
             nav.navbar
                 ul.navbar-menu.center-xs.end-sm
                     li.navbar-menu-item
-                        a.navbar-menu-link(href='#') Eu
+                        a.navbar-menu-link(href='#') Sobre mim
                     li.navbar-menu-item
-                        a.navbar-menu-link(href='#') Projetos recentes
+                        a.navbar-menu-link(href='#') Projetos
                     li.navbar-menu-item
                         a.navbar-menu-link(href='#') Contato
             
             section.section.myself
                 h2.title Um pouco sobre mim
-                p Oi, meu nome é Matheus Plessmann de Oliveira. Sou um Desenvolvedor Front End que ama criar coisas.
-                p Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM
+                p Meu nome é Matheus Plessmann de Oliveira.
+                p Eu sou um Desenvolvedor Front-End especializado em criar interfaces web responsivas, sempre focadas na experiência do usuário, mantendo um código semântico, escalável e funcional. Amo fazer parte da comunidade Front End, já participei do DevInSantos aqui da minha cidade e vou participar da 6ª edição do FrontInSampa. Esse lado da comunidade onde todos trocamos nossos conhecimentos é algo que me faz gostar mais ainda dessa área!
+                p Minhas pricipais habilidades são: HTML5, CSS3, JavaScript, Sass, PugJS, Gulp, jQuery, Git, NPM.
+                p NodeJS, ReactJS / VueJS e Elm são as próximas tecnologias que eu quero me especializar.s
+                //- p Outras linguagens que eu já me aventurei: Haskell, PHP, MySQL
+                p 
+                    | Gosto muito de ouvir podcasts. O meu favorito é o
+                    |
+                    a.link(href='http://devnaestrada.com.br/', target='_blank') Devnaestrada
+                    |
+                    | e também escuto bastante o
+                    |
+                    a.link(href='https://jovemnerd.com.br/nerdcast/', target='_blank') Nerdcast
+                    | . Já a minha linguagem favorita é sem dúvidas o CSS <3.
                 
             section.section.projects
                 h2.title Meus projetos recentes
@@ -36,7 +48,6 @@ block content
                     +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
-                .row.projects-row
                     +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
@@ -46,26 +57,30 @@ block content
                 p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
                 .row
                     .col-xs-12.col-md-7
-                        form.row(action='https://formspree.io/maplessmann@gmail.com', method='POST')
-                            .input-field.col-xs-12.col-md
-                                input(type='text', name='name', placeholder='Nome')
-                            .input-field.col-xs-12.col-md
-                                input(type='email', name='_replyto', placeholder='Email')
-                            .input-field.col-xs-12
-                                textarea(name='message', placeholder='Sua mensagem')
-                            .input-field.col-xs-12
-                                input.btn(type='submit')
+                        form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
+                            .input-field
+                                input(type='text', name='name')
+                                label(for='identificador') Nome
+                            .input-field
+                                input(type='email', name='_replyto', required)
+                                label(for='identificador') Email
+                            .input-field
+                                textarea(name='message', required)
+                                label(for='identificador') Sua mensagem
+                            .input-field
+                                input.btn(type='submit', value='Enviar mensagem')
                             
                     .col-xs-12.col-md-5
-                        i.fa.fa-envelope
-                        |
-                        |
-                        a(href='mailto:maplessmann@gmail.com', target='_blank') Me mande um e-mail
-                        br
-                        i.fa.fa-telegram
-                        |
-                        |
-                        a(href='mailto:maplessmann@gmail.com', target='_blank') Me chame no Telegram
+                        p
+                            i.fa.fa-envelope
+                            |
+                            |
+                            a.link(href='mailto:maplessmann@gmail.com', target='_blank') Me mande um e-mail
+                        p
+                            i.fa.fa-telegram
+                            |
+                            |
+                            a.link(href='mailto:maplessmann@gmail.com', target='_blank') Me chame no Telegram
 
 
             footer.footer
@@ -82,6 +97,6 @@ block content
                         |
                         | disponível no
                         |
-                        a(href='https://github.com/maplessmann/personal-website', target='_blank') Github
+                        a.link(href='https://github.com/maplessmann/personal-website', target='_blank') Github
                         | .
                     

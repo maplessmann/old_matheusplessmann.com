@@ -6,43 +6,51 @@
     <meta name="theme-color" content="#6191bf">
     <meta property="og:url" content="http://matheusplessmann.com">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Matheus Plessmann | Desenvolvedor Front End">
-    <meta property="og:description" content="Desenvolvedor Front End, amante de CSS e UX!">
-    <meta property="og:image" content="img/banner.png">
-    <title>Matheus Plessmann | Desenvolvedor Front End</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800,800i">
+    <meta property="og:title" content="Matheus Plessmann - Desenvolvedor Front End">
+    <meta property="og:description" content="Eu sou um Desenvolvedor Front-End especializado em criar interfaces web responsivas, sempre focadas na experiência com o usuário. Mantendo um código semântico, escalável e funcional.">
+    <meta property="og:image" content="images/banner.png">
+    <title>Matheus Plessmann - Desenvolvedor Front End</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,800,800i">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/libs/flexboxgrid.css">
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
   </head>
   <body class="flex-wrapper">
     <header class="header">
-      <div class="header-fixed"><a class="header-logo" href="#"><img class="header-logo-img" src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann">
+      <div class="header-fixed"><a class="header-logo hidden" href="#"><img class="header-logo-img" src="images/logo-matheus-plessmann.svg" alt="Matheus Plessmann">
           <div class="header-name"><span class="first-name">Matheus</span>Plessmann</div></a>
-        <div class="header-social"><a class="header-social-link fa fa-github tooltip" href="https://github.com/maplessmann" target="_blank" data-tooltip="Github"></a><a class="header-social-link fa fa-linkedin-square tooltip" href="https://www.linkedin.com/in/matheus-plessmann-329283a0" target="_blank" data-tooltip="Linkedin"></a><a class="header-social-link fa fa-codepen tooltip" href="https://codepen.io/maplessmann/" target="_blank" data-tooltip="Codepen"></a><a class="header-social-link fa fa-telegram tooltip" href="https://telegram.me/maplessmann" target="_blank" data-tooltip="Telegram"></a></div>
+        <div class="header-social hidden"><a class="header-social-link fa fa-github tooltip" href="https://github.com/maplessmann" target="_blank" data-tooltip="Github"></a><a class="header-social-link fa fa-linkedin-square tooltip" href="https://www.linkedin.com/in/matheus-plessmann-329283a0" target="_blank" data-tooltip="Linkedin"></a><a class="header-social-link fa fa-codepen tooltip" href="https://codepen.io/maplessmann/" target="_blank" data-tooltip="Codepen"></a><a class="header-social-link fa fa-telegram tooltip" href="https://telegram.me/maplessmann" target="_blank" data-tooltip="Telegram"></a></div>
       </div>
     </header>
     <main class="content">
       <div class="container">
         <nav class="navbar">
           <ul class="navbar-menu center-xs end-sm">
-            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Eu</a></li>
-            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Projetos recentes</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Sobre mim</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Projetos</a></li>
             <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Contato</a></li>
           </ul>
         </nav>
         <section class="section myself">
           <h2 class="title">Um pouco sobre mim</h2>
-          <p>Oi, meu nome é Matheus Plessmann de Oliveira. Sou um Desenvolvedor Front End que ama criar coisas.</p>
-          <p>Minhas pricipais habilidades: HTML5, CSS3, JavaScript, SASS, Gulp, jQuery, Git, NPM</p>
+          <p>Meu nome é Matheus Plessmann de Oliveira.</p>
+          <p>Eu sou um Desenvolvedor Front-End especializado em criar interfaces web responsivas, sempre focadas na experiência do usuário, mantendo um código semântico, escalável e funcional. Amo fazer parte da comunidade Front End, já participei do DevInSantos aqui da minha cidade e vou participar da 6ª edição do FrontInSampa. Esse lado da comunidade onde todos trocamos nossos conhecimentos é algo que me faz gostar mais ainda dessa área!</p>
+          <p>Minhas pricipais habilidades são: HTML5, CSS3, JavaScript, Sass, PugJS, Gulp, jQuery, Git, NPM.</p>
+          <p>NodeJS, ReactJS / VueJS e Elm são as próximas tecnologias que eu quero me especializar.s</p>
+          <p>
+             Gosto muito de ouvir podcasts. O meu favorito é o
+            <a class="link" href="http://devnaestrada.com.br/" target="_blank">Devnaestrada</a>
+            e também escuto bastante o
+            <a class="link" href="https://jovemnerd.com.br/nerdcast/" target="_blank">Nerdcast</a>. Já a minha linguagem favorita é sem dúvidas o CSS <3.
+          </p>
         </section>
         <section class="section projects">
           <h2 class="title">Meus projetos recentes</h2>
           <div class="row projects-row">
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
                   <figcaption>
@@ -52,7 +60,7 @@
                 </figure>
               </div>
             </div>
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
                   <figcaption>
@@ -62,7 +70,7 @@
                 </figure>
               </div>
             </div>
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
                   <figcaption>
@@ -72,9 +80,7 @@
                 </figure>
               </div>
             </div>
-          </div>
-          <div class="row projects-row">
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
                   <figcaption>
@@ -84,7 +90,7 @@
                 </figure>
               </div>
             </div>
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
                   <figcaption>
@@ -94,7 +100,7 @@
                 </figure>
               </div>
             </div>
-            <div class="col-xs-12 col-md">
+            <div class="col-xs-12 col-sm-6 col-md-4">
               <div class="project-item">
                 <figure><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
                   <figcaption>
@@ -111,24 +117,31 @@
           <p>Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.</p>
           <div class="row">
             <div class="col-xs-12 col-md-7">
-              <form class="row" action="https://formspree.io/maplessmann@gmail.com" method="POST">
-                <div class="input-field col-xs-12 col-md">
-                  <input type="text" name="name" placeholder="Nome">
+              <form action="https://formspree.io/maplessmann@gmail.com" method="POST">
+                <div class="input-field">
+                  <input type="text" name="name">
+                  <label for="identificador">Nome</label>
                 </div>
-                <div class="input-field col-xs-12 col-md">
-                  <input type="email" name="_replyto" placeholder="Email">
+                <div class="input-field">
+                  <input type="email" name="_replyto" required>
+                  <label for="identificador">Email</label>
                 </div>
-                <div class="input-field col-xs-12">
-                  <textarea name="message" placeholder="Sua mensagem"></textarea>
+                <div class="input-field">
+                  <textarea name="message" required></textarea>
+                  <label for="identificador">Sua mensagem</label>
                 </div>
-                <div class="input-field col-xs-12">
-                  <input class="btn" type="submit">
+                <div class="input-field">
+                  <input class="btn" type="submit" value="Enviar mensagem">
                 </div>
               </form>
             </div>
-            <div class="col-xs-12 col-md-5"><i class="fa fa-envelope"></i>
-              <a href="mailto:maplessmann@gmail.com" target="_blank">Me mande um e-mail</a><br><i class="fa fa-telegram"></i>
-              <a href="mailto:maplessmann@gmail.com" target="_blank">Me chame no Telegram</a>
+            <div class="col-xs-12 col-md-5">
+              <p><i class="fa fa-envelope"></i>
+                <a class="link" href="mailto:maplessmann@gmail.com" target="_blank">Me mande um e-mail</a>
+              </p>
+              <p><i class="fa fa-telegram"></i>
+                <a class="link" href="mailto:maplessmann@gmail.com" target="_blank">Me chame no Telegram</a>
+              </p>
             </div>
           </div>
         </section>
@@ -138,10 +151,11 @@
               <i class="fa fa-heart"></i>
               e café.</small><br><small><i class="fa fa-code"></i>
               disponível no
-              <a href="https://github.com/maplessmann/personal-website" target="_blank">Github</a>.</small></p>
+              <a class="link" href="https://github.com/maplessmann/personal-website" target="_blank">Github</a>.</small></p>
         </footer>
       </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

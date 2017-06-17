@@ -15,13 +15,19 @@ img
     vertical-align: middle
 
 a
-    color: $color-link
     text-decoration: none
-    transition: .2s
 
     &:hover
         color: lighten($color-link, 10%)
 
-::placeholder
-    color: rgba(0,0,0,.2)
-    font-weight: 600
+.link
+    transition: .2s
+    color: $color-link
+    border-bottom: 1px dotted $color-link
+
+    &:hover
+        color: transparentize($color-link, .2)
+        border-bottom: 0
+
+.hidden
+    display: none
