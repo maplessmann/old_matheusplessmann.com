@@ -1,18 +1,25 @@
-$(document).ready(function() {
+/* Adiciona a classe 'loaded' após a página ter sido carregada, para iniciar as animações */
+(function() {
 
-    /* Remove a classe 'hidden' dos elementos após a página ter sido carregada */
-    $('.hidden').removeClass('hidden');
+    var $window = $(window),
+    $body = $('body');
 
-    /* Adiciona ou remove a classe 'active' da label, conforme o estado do input */
-    $('.input-field input, .input-field textarea').focusout(function() {
-        var thisElem = $(this);
-        var textValue = thisElem.val();
-
-        if (textValue === '') {
-            thisElem.removeClass('active');
-        } else {
-            thisElem.addClass('active');
-        }
+    $window.on('load', function() {
+        window.setTimeout(function() {
+            $body.addClass('loaded');
+        }, 250);
     });
 
+})();
+
+/* Adiciona ou remove a classe 'active' da label, conforme o estado do input */
+$('.input-field input, .input-field textarea').focusout(function() {
+    var thisElem = $(this);
+    var textValue = thisElem.val();
+
+    if (textValue === '') {
+        thisElem.removeClass('active');
+    } else {
+        thisElem.addClass('active');
+    }
 });

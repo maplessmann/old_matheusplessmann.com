@@ -30,6 +30,9 @@
     flex-basis: 100%
     max-width: 100%
     width: 100%
+    animation-name: slideRight
+    animation-duration: .8s
+    animation-timing-function: ease-in-out
 
     &-fixed
         flex-basis: 100%
@@ -45,7 +48,7 @@
     &-logo
         transition: 1s
         animation-name: slideUp
-        animation-duration: 2s
+        animation-duration: 2.2s
 
         &-img
             width: 4rem
@@ -56,11 +59,13 @@
     &-title
         max-width: 17rem
         color: #fff
-        text-shadow: 0 0 20px rgba(0,0,0,0.1)
+        text-shadow: 0 0 20px rgba(0,0,0,.1)
         font-size: 1.3rem
-        font-weight: 700
+        font-weight: 500
         line-height: 1.1
         margin: 3rem 0
+        animation-name: blurOut
+        animation-duration: 2s
 
         &-wrap
             display: block
@@ -69,7 +74,6 @@
                 margin-bottom: 1rem
 
     &-social
-        // margin-top: 2rems
 
         &:hover &-link
             opacity: .5
@@ -79,7 +83,7 @@
             color: #353535
             font-size: 1.5rem
             transition: .3s ease
-            animation-name: blurApear
+            animation-name: blurOut
             animation-duration: 2.5s
 
             .header-social:hover &:hover
@@ -94,9 +98,6 @@
     .flex-wrapper
         display: flex
         flex-wrap: wrap
-
-        // $header-width: 36%
-        $header-width: 33%
 
         .header
             flex-basis: $header-width
@@ -117,17 +118,30 @@
             flex-basis: 100% - $header-width
             max-width: 100% - $header-width
 
+body:not(.loaded)
+    .animate-onload,
+    .animate-onload *
+        animation: none !important
+        opacity: 0
+
 @keyframes slideUp
     0%
         opacity: 0
         transform: translateY(2rem)
-    20%
+    40%
         opacity: 0
     100%
         opacity: 1
         transform: translateY(0)
 
-@keyframes blurApear
+@keyframes slideRight
+    0%
+        opacity: 0
+        width: 0%
+    100%
+        width: $header-width
+
+@keyframes blurOut
     0%
         opacity: 0
         filter: blur(3rem)
