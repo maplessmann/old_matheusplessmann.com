@@ -22,6 +22,12 @@
 @import common/components.sass
 
 
+////////////////
+// ANIMATIONS //
+////////////////
+@import common/animations.sass
+
+
 ////////////
 // HEADER //
 ////////////
@@ -44,8 +50,6 @@
 
     &-logo
         transition: 1s
-        animation-name: slideUp
-        animation-duration: 2.2s
 
         &-img
             width: 4rem
@@ -109,36 +113,6 @@
             flex-basis: 100% - $header-width
             max-width: 100% - $header-width
 
-
-
-// Enquanto o site não for carregado não mostra nenhuma animação
-body:not(.loaded)
-    // .animate-onload,
-    // .animate-onload *
-        animation: none !important
-        opacity: 0
-
-// Carrega as animações uma após a outra
-.header-fixed.is-visible
-    // animation-timing-function: cubic-bezier(0.85, 0, 0.57, 1)
-    // animation: slideRight .8s cubic-bezier(0.79, 0.10, 0.59, 0.93)
-    animation: slideRight .8s cubic-bezier(0.94, 0.01, 0.65, 1)
-
-.header-logo.is-visible
-    animation: slideUp 1.6s ease-in-out
-
-.header-title.is-visible
-    // animation: focus 2.4s cubic-bezier(.85, .46, .45, .94) forwards
-    animation: focus 2.2s cubic-bezier(.85, .46, .45, .94)
-    // animation: focus 2s ease-in
-
-.header-social.is-visible
-    animation: focus 2.2s cubic-bezier(0.4, 0, 1, 1)
-    // animation: focus 2s ease-in
-
-.animate-onload:not(.is-visible)
-    animation: none !important
-    opacity: 0
 
 
 /////////////

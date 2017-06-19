@@ -36,70 +36,6 @@ a:hover {
   color: rgba(45, 108, 162, 0.8);
   border-bottom: 0; }
 
-@-webkit-keyframes slideRight {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1; } }
-
-@keyframes slideRight {
-  0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1; } }
-
-@-webkit-keyframes slideUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
-  40% {
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
-  40% {
-    opacity: 0; }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
-
-@-webkit-keyframes focus {
-  0% {
-    opacity: 0;
-    -webkit-filter: blur(3rem);
-            filter: blur(3rem); }
-  100% {
-    opacity: 1;
-    -webkit-filter: blur(0);
-            filter: blur(0); } }
-
-@keyframes focus {
-  0% {
-    opacity: 0;
-    -webkit-filter: blur(3rem);
-            filter: blur(3rem); }
-  100% {
-    opacity: 1;
-    -webkit-filter: blur(0);
-            filter: blur(0); } }
-
 .tooltip {
   position: relative; }
 
@@ -232,6 +168,133 @@ textarea:focus {
       -ms-transform: translateY(-220%);
           transform: translateY(-220%); }
 
+body .header-fixed {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+body .header-logo {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.48s;
+          animation-delay: 0.48s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+body .header-title {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.08s;
+          animation-delay: 1.08s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+body .header-social {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.68s;
+          animation-delay: 1.68s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.header-fixed {
+  -webkit-animation-name: slideRight;
+          animation-name: slideRight;
+  -webkit-animation-timing-function: cubic-bezier(0.94, 0.01, 0.65, 1);
+          animation-timing-function: cubic-bezier(0.94, 0.01, 0.65, 1); }
+
+.header-logo {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease; }
+
+.header-title {
+  -webkit-animation-name: focus;
+          animation-name: focus;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out; }
+
+.header-social {
+  -webkit-animation-name: focus;
+          animation-name: focus;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out; }
+
+.has-animation {
+  opacity: 0; }
+
+body:not(.loaded) .has-animation {
+  -webkit-animation: none;
+          animation: none; }
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@-webkit-keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%); }
+  40% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(25%);
+            transform: translateY(25%); }
+  40% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes focus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(2rem);
+            filter: blur(2rem); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
+
+@keyframes focus {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(2rem);
+            filter: blur(2rem); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0); } }
+
 .header {
   text-align: center;
   -ms-flex-preferred-size: 100%;
@@ -268,11 +331,7 @@ textarea:focus {
 .header-logo {
   -webkit-transition: 1s;
   -o-transition: 1s;
-  transition: 1s;
-  -webkit-animation-name: slideUp;
-          animation-name: slideUp;
-  -webkit-animation-duration: 2.2s;
-          animation-duration: 2.2s; }
+  transition: 1s; }
 
 .header-logo-img {
   width: 4rem; }
@@ -339,27 +398,6 @@ textarea:focus {
     -ms-flex-preferred-size: 64%;
         flex-basis: 64%;
     max-width: 64%; } }
-
-.header-fixed.is-visible {
-  -webkit-animation: slideRight 0.8s cubic-bezier(0.94, 0.01, 0.65, 1);
-          animation: slideRight 0.8s cubic-bezier(0.94, 0.01, 0.65, 1); }
-
-.header-logo.is-visible {
-  -webkit-animation: slideUp 1.6s ease-in-out;
-          animation: slideUp 1.6s ease-in-out; }
-
-.header-title.is-visible {
-  -webkit-animation: focus 2.2s cubic-bezier(0.85, 0.46, 0.45, 0.94);
-          animation: focus 2.2s cubic-bezier(0.85, 0.46, 0.45, 0.94); }
-
-.header-social.is-visible {
-  -webkit-animation: focus 2.2s cubic-bezier(0.4, 0, 1, 1);
-          animation: focus 2.2s cubic-bezier(0.4, 0, 1, 1); }
-
-.animate-onload:not(.is-visible) {
-  -webkit-animation: none !important;
-          animation: none !important;
-  opacity: 0; }
 
 .container {
   width: 88%; }
