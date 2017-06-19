@@ -30,15 +30,12 @@
     flex-basis: 100%
     max-width: 100%
     width: 100%
-    animation-name: slideRight
-    animation-duration: .8s
-    animation-timing-function: ease-in-out
 
     &-fixed
         flex-basis: 100%
         max-width: 100%
         padding: 2rem
-        +background-image('../images/header-bg.jpg', #fff)
+        +background-image('../images/header-bg-2.jpg', #fff)
         display: flex
         flex-wrap: wrap
         align-items: center
@@ -64,8 +61,6 @@
         font-weight: 500
         line-height: 1.1
         margin: 3rem 0
-        animation-name: blurOut
-        animation-duration: 2s
 
         &-wrap
             display: block
@@ -80,11 +75,9 @@
             filter: blur(.2rem)
 
         &-link
-            color: #353535
+            color: #eee !important
             font-size: 1.5rem
             transition: .3s ease
-            animation-name: blurOut
-            animation-duration: 2.5s
 
             .header-social:hover &:hover
                 opacity: 1
@@ -110,47 +103,42 @@
                 width: inherit
                 height: inherit
                 padding: 4rem 1rem
-
-            &-social-link
-                color: #eee
+                background-position: center top
 
         .content
             flex-basis: 100% - $header-width
             max-width: 100% - $header-width
 
+
+
+// Enquanto o site não for carregado não mostra nenhuma animação
 body:not(.loaded)
-    .animate-onload,
-    .animate-onload *
+    // .animate-onload,
+    // .animate-onload *
         animation: none !important
         opacity: 0
 
-@keyframes slideUp
-    0%
-        opacity: 0
-        transform: translateY(2rem)
-    40%
-        opacity: 0
-    100%
-        opacity: 1
-        transform: translateY(0)
+// Carrega as animações uma após a outra
+.header-fixed.is-visible
+    // animation-timing-function: cubic-bezier(0.85, 0, 0.57, 1)
+    // animation: slideRight .8s cubic-bezier(0.79, 0.10, 0.59, 0.93)
+    animation: slideRight .8s cubic-bezier(0.94, 0.01, 0.65, 1)
 
-@keyframes slideRight
-    0%
-        opacity: 0
-        width: 0%
-    100%
-        width: $header-width
+.header-logo.is-visible
+    animation: slideUp 1.6s ease-in-out
 
-@keyframes blurOut
-    0%
-        opacity: 0
-        filter: blur(3rem)
-    25%
-        opacity: 0
-    100%
-        opacity: 1
-        filter: blur(0)
+.header-title.is-visible
+    // animation: focus 2.4s cubic-bezier(.85, .46, .45, .94) forwards
+    animation: focus 2.2s cubic-bezier(.85, .46, .45, .94)
+    // animation: focus 2s ease-in
 
+.header-social.is-visible
+    animation: focus 2.2s cubic-bezier(0.4, 0, 1, 1)
+    // animation: focus 2s ease-in
+
+.animate-onload:not(.is-visible)
+    animation: none !important
+    opacity: 0
 
 
 /////////////
