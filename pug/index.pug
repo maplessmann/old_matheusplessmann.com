@@ -2,7 +2,7 @@ extends includes/template.pug
 
 //- Mixins
 mixin projectItem(url, img, title, text)
-    .project-item.col-xs-12.col-sm-6.col-md-4
+    .project-item.col-xs-12.col-sm-6.col-md-6
         figure
             a.project-link(href= url)
                 img.project-img(src= img, alt='')
@@ -47,11 +47,11 @@ block content
                 h2.title Meus projetos recentes
                 .row.projects-row
                     +projectItem('#', 'images/project-1.jpg', 'Evento MindPro', 'Texto')
-                    +projectItem('#', 'images/project-2.jpg', 'Plataforma de Cursos', 'Texto')
-                    +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
-                    +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
-                    +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
-                    +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-2.jpg', 'Plataforma de cursos Triad', 'Texto')
+                    +projectItem('#', 'images/project-3.jpg', 'Foco em Pediatria', 'Texto')
+                    +projectItem('#', 'images/project-2.jpg', 'Lightweight responsive iframe videos', 'Texto')
+                    //- +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
+                    //- +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
                     
             section.section.contact
                 h2.title Entre em contato
