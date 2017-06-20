@@ -2,14 +2,13 @@ extends includes/template.pug
 
 //- Mixins
 mixin projectItem(url, img, title, text)
-    .col-xs-12.col-sm-6.col-md-4
-        .project-item
-            figure
-                a.project-link(href= url)
-                    img.project-img(src= img, alt='')
-                figcaption
-                    p.project-title= title
-                    p.project-text= text
+    .project-item.col-xs-12.col-sm-6.col-md-4
+        figure
+            a.project-link(href= url)
+                img.project-img(src= img, alt='')
+            figcaption
+                h4.project-title= title
+                p.project-text= text
 
 block content
     include includes/header.pug
@@ -47,8 +46,8 @@ block content
             section.section.projects
                 h2.title Meus projetos recentes
                 .row.projects-row
-                    +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
-                    +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
+                    +projectItem('#', 'images/project-1.jpg', 'Evento MindPro', 'Texto')
+                    +projectItem('#', 'images/project-2.jpg', 'Plataforma de Cursos', 'Texto')
                     +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-2.jpg', 'Título', 'Texto')
                     +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')

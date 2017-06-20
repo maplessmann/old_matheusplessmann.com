@@ -2,22 +2,19 @@
 .tooltip
     position: relative
 
-    &:hover
-
-        &::after
-            content: attr(data-tooltip)
-            position: absolute
-            bottom: 2.2rem
-            left: 50%
-            transform: translateX(-50%)
-            background-color: rgba(255,255,255,.5)
-            // box-shadow: 1px 1px 10px rgba(0,0,0,.2)
-            box-shadow: 0px 8px 15px -6px rgba(0,0,0,.2)
-            color: rgba(0,0,0,.6)
-            font-family: 'Roboto', sans-serif
-            font-size: .8rem
-            padding: .5rem 1rem
-            animation: slideUpTooltip .8s
+    &:hover::after
+        content: attr(data-tooltip)
+        position: absolute
+        bottom: 2.2rem
+        left: 50%
+        transform: translateX(-50%)
+        background-color: rgba(255,255,255,.5)
+        box-shadow: 0px 8px 15px -6px rgba(0,0,0,.2)
+        color: rgba(0,0,0,.6)
+        font-family: 'Roboto', sans-serif
+        font-size: .8rem
+        padding: .5rem 1rem
+        animation: slideUpTooltip .8s
 
 @keyframes slideUpTooltip
     0%,
@@ -75,12 +72,10 @@ textarea
     &:focus
         outline: none
         background-color: #eaeaea
-        // border-color: transparentize($color-blue, .6)
-        // box-shadow: 0 0 5px transparentize($color-blue, .4)
 
 .input-field
     position: relative
-    margin-top: 1.5rem
+    margin-top: 1.9rem
 
     input,
     textarea
@@ -98,4 +93,4 @@ textarea
             color: #aaa
             font-size: .8rem
             margin-left: 0
-            transform: translateY(-220%)
+            transform: translateY(-210%)
