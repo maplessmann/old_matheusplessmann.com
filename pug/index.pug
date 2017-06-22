@@ -18,13 +18,13 @@ block content
             nav.navbar
                 ul.navbar-menu.center-xs.end-sm
                     li.navbar-menu-item
-                        a.navbar-menu-link(href='#') Sobre mim
+                        a.navbar-menu-link(href='#about') Sobre mim
                     li.navbar-menu-item
-                        a.navbar-menu-link(href='#') Projetos
+                        a.navbar-menu-link(href='#projects') Projetos
                     li.navbar-menu-item
-                        a.navbar-menu-link(href='#') Contato
+                        a.navbar-menu-link(href='#contact') Contato
             
-            section.section.myself
+            section#about.section.myself
                 h2.title Um pouco sobre mim
                 //- p Meu nome completo é Matheus Plessmann de Oliveira.
                 p Eu sou um Desenvolvedor Front-End empenhado em criar interfaces web responsivas, sempre focadas na experiência do usuário, mantendo um código semântico, escalável e funcional. Amo fazer parte da comunidade Front End, já participei do DevInSantos aqui da minha cidade e vou participar da 6ª edição do FrontInSampa. Esse lado da comunidade onde todos trocamos conhecimentos é algo que me faz gostar mais ainda dessa área!
@@ -43,7 +43,7 @@ block content
                     a.link(href='https://jovemnerd.com.br/nerdcast/', target='_blank') Nerdcast
                     | . Já a minha linguagem favorita é sem dúvidas o CSS <3.
                 
-            section.section.projects
+            section#projects.section.projects
                 h2.title Meus projetos recentes
                 .row.projects-row
                     +projectItem('#', 'images/project-1.jpg', 'Evento MindPro', 'Texto')
@@ -53,7 +53,7 @@ block content
                     //- +projectItem('#', 'images/project-3.jpg', 'Título', 'Texto')
                     //- +projectItem('#', 'images/project-1.jpg', 'Título', 'Texto')
                     
-            section.section.contact
+            section#contact.section.contact
                 h2.title Entre em contato
                 p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
                 .row
