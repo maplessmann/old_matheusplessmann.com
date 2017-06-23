@@ -10,7 +10,7 @@
     <meta property="og:description" content="Eu sou um Desenvolvedor Front-End especializado em criar interfaces web responsivas, sempre focadas na experiência com o usuário. Mantendo um código semântico, escalável e funcional.">
     <meta property="og:image" content="images/banner.png">
     <title>Matheus Plessmann - Desenvolvedor Front End</title>
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="css/libs/flexboxgrid.css">
@@ -29,12 +29,12 @@
       <div class="container">
         <nav class="navbar">
           <ul class="navbar-menu center-xs end-sm">
-            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Sobre mim</a></li>
-            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Projetos</a></li>
-            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#">Contato</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#about">Sobre mim</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#projects">Projetos</a></li>
+            <li class="navbar-menu-item"><a class="navbar-menu-link" href="#contact">Contato</a></li>
           </ul>
         </nav>
-        <section class="section myself">
+        <section class="section myself" id="about">
           <h2 class="title">Um pouco sobre mim</h2>
           <p>Eu sou um Desenvolvedor Front-End empenhado em criar interfaces web responsivas, sempre focadas na experiência do usuário, mantendo um código semântico, escalável e funcional. Amo fazer parte da comunidade Front End, já participei do DevInSantos aqui da minha cidade e vou participar da 6ª edição do FrontInSampa. Esse lado da comunidade onde todos trocamos conhecimentos é algo que me faz gostar mais ainda dessa área!</p>
           <p>Minhas pricipais habilidades são: HTML5, CSS3, JavaScript, Sass, PugJS, Gulp, jQuery, Git e NPM.<br>NodeJS, ReactJS / VueJS e Elm são os meus próximos passos.</p>
@@ -45,44 +45,48 @@
             <a class="link" href="https://jovemnerd.com.br/nerdcast/" target="_blank">Nerdcast</a>. Já a minha linguagem favorita é sem dúvidas o CSS <3.
           </p>
         </section>
-        <section class="section projects">
+        <section class="section projects" id="projects">
           <h2 class="title">Meus projetos recentes</h2>
+          <p>
+             Ao longo desses anos eu já desenvolvi diversos sites e já criei alguns projetos bem legais também. 
+            Esses são alguns dos trabalhos que eu fiz recentemente:
+          </p>
           <div class="row projects-row">
             <div class="project-item col-xs-12 col-sm-6 col-md-6">
-              <figure><a class="project-link" href="#"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
+              <figure><a class="project-link" href="http://triadedaprodutividade.com/mindpro-triad" target="_blank" data-button="Visitar site"><img class="project-img" src="images/project-mindpro.png" alt=""/></a>
                 <figcaption>
-                  <h4 class="project-title">Evento MindPro</h4>
+                  <h4 class="project-title">Evento Mindpro</h4>
                   <p class="project-text">Texto</p>
                 </figcaption>
               </figure>
             </div>
             <div class="project-item col-xs-12 col-sm-6 col-md-6">
-              <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
+              <figure><a class="project-link" href="http://triadedaprodutividade.com/plataforma" target="_blank" data-button="Visitar site"><img class="project-img" src="images/project-plataforma-tpr.png" alt=""/></a>
                 <figcaption>
-                  <h4 class="project-title">Plataforma de cursos Triad</h4>
+                  <h4 class="project-title">Plataforma de cursos</h4>
                   <p class="project-text">Texto</p>
                 </figcaption>
               </figure>
             </div>
             <div class="project-item col-xs-12 col-sm-6 col-md-6">
-              <figure><a class="project-link" href="#"><img class="project-img" src="images/project-3.jpg" alt=""/></a>
+              <figure><a class="project-link" href="http://triadprime.com.br/inscricao-pf" target="_blank" data-button="Visitar site"><img class="project-img" src="images/project-triad-prime.png" alt=""/></a>
+                <figcaption>
+                  <h4 class="project-title">Triad Prime</h4>
+                  <p class="project-text">Texto</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="project-item col-xs-12 col-sm-6 col-md-6">
+              <figure><a class="project-link" href="#" target="_blank" data-button="Visitar site"><img class="project-img" src="images/project-1.jpg" alt=""/></a>
                 <figcaption>
                   <h4 class="project-title">Foco em Pediatria</h4>
                   <p class="project-text">Texto</p>
                 </figcaption>
               </figure>
             </div>
-            <div class="project-item col-xs-12 col-sm-6 col-md-6">
-              <figure><a class="project-link" href="#"><img class="project-img" src="images/project-2.jpg" alt=""/></a>
-                <figcaption>
-                  <h4 class="project-title">Lightweight responsive iframe videos</h4>
-                  <p class="project-text">Texto</p>
-                </figcaption>
-              </figure>
-            </div>
           </div>
         </section>
-        <section class="section contact">
+        <section class="section contact" id="contact">
           <h2 class="title">Entre em contato</h2>
           <p>Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.</p>
           <div class="row">
@@ -110,7 +114,7 @@
                 <a class="link" href="mailto:maplessmann@gmail.com" target="_blank">Me mande um e-mail</a>
               </p>
               <p><i class="fa fa-telegram"></i>
-                <a class="link" href="mailto:maplessmann@gmail.com" target="_blank">Me chame no Telegram</a>
+                <a class="link" href="https://telegram.me/maplessmann" target="_blank">Me chame no Telegram</a>
               </p>
             </div>
           </div>
