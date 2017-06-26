@@ -86,7 +86,7 @@ a:hover {
             transform: translate(-50%, 0); } }
 
 .btn {
-  background-color: #6191bf;
+  background-color: #67a6e5;
   color: #fff;
   line-height: 1.1;
   padding: .7rem 1.6rem;
@@ -98,9 +98,12 @@ a:hover {
   cursor: pointer; }
 
 .btn:hover {
-  background-color: #85aace;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
+  background-color: #8abaeb;
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px); }
 
 textarea {
   resize: vertical;
@@ -174,69 +177,6 @@ textarea:focus {
       -ms-transform: translateY(-210%);
           transform: translateY(-210%); }
 
-body .header-fixed {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-body .header-logo {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.48s;
-          animation-delay: 0.48s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-body .header-title {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1.08s;
-          animation-delay: 1.08s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-body .header-social {
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 1.68s;
-          animation-delay: 1.68s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards; }
-
-.header-fixed {
-  -webkit-animation-name: slideRight;
-          animation-name: slideRight;
-  -webkit-animation-timing-function: cubic-bezier(0.94, 0.01, 0.65, 1);
-          animation-timing-function: cubic-bezier(0.94, 0.01, 0.65, 1); }
-
-.header-logo {
-  -webkit-animation-name: slideUp;
-          animation-name: slideUp;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease; }
-
-.header-title {
-  -webkit-animation-name: focus;
-          animation-name: focus;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
-
-.header-social {
-  -webkit-animation-name: focus;
-          animation-name: focus;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
-
-.has-animation {
-  opacity: 0; }
-
-body:not(.loaded) .has-animation {
-  -webkit-animation: none;
-          animation: none; }
-
 @-webkit-keyframes slideRight {
   0% {
     -webkit-transform: translateX(-100%);
@@ -257,13 +197,31 @@ body:not(.loaded) .has-animation {
             transform: translateX(0);
     opacity: 1; } }
 
+@-webkit-keyframes slideRight2 {
+  0% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slideRight2 {
+  0% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
 @-webkit-keyframes slideUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
-  40% {
-    opacity: 0; }
+    -webkit-transform: translateY(3.5%);
+            transform: translateY(3.5%); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -272,10 +230,8 @@ body:not(.loaded) .has-animation {
 @keyframes slideUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(25%);
-            transform: translateY(25%); }
-  40% {
-    opacity: 0; }
+    -webkit-transform: translateY(3.5%);
+            transform: translateY(3.5%); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -300,6 +256,86 @@ body:not(.loaded) .has-animation {
     opacity: 1;
     -webkit-filter: blur(0);
             filter: blur(0); } }
+
+.header-fixed {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.header-logo {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.header-title {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.header-social {
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 1.04s;
+          animation-delay: 1.04s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.navbar {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 1.36s;
+          animation-delay: 1.36s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.section {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.48s;
+          animation-delay: 1.48s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+.header-fixed {
+  -webkit-animation-name: slideRight;
+          animation-name: slideRight;
+  -webkit-animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1);
+          animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1); }
+
+.header-logo,
+.header-title,
+.header-social {
+  -webkit-animation-name: slideRight2;
+          animation-name: slideRight2;
+  -webkit-animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1);
+          animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1); }
+
+.section,
+.navbar {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9);
+          animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9); }
+
+.has-animation,
+.section,
+.navbar {
+  opacity: 0; }
+
+body:not(.loaded) .has-animation,
+body:not(.loaded) .section,
+body:not(.loaded) .navbar {
+  -webkit-animation: none;
+          animation: none; }
 
 .header {
   text-align: center;
@@ -448,18 +484,18 @@ body:not(.loaded) .has-animation {
   -o-transition: width .3s ease;
   transition: width .3s ease;
   /* background: linear-gradient(to left, #36d1dc, #5b86e5) */
-  background: -webkit-gradient(linear, right top, left top, from(#56ccf2), to(#2f80ed));
-  background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
-  background: -o-linear-gradient(right, #56ccf2, #2f80ed);
-  background: linear-gradient(to left, #56ccf2, #2f80ed); }
+  background: -webkit-gradient(linear, left top, right top, from(#5884e9), to(#2fbfde));
+  background: -webkit-linear-gradient(left, #5884e9, #2fbfde);
+  background: -o-linear-gradient(left, #5884e9, #2fbfde);
+  background: linear-gradient(to right, #5884e9, #2fbfde); }
 
 .navbar-menu-link:hover {
   color: #699fc7;
   /* background: linear-gradient(to left, #36d1dc, #5b86e5) */
-  background: -webkit-gradient(linear, right top, left top, from(#56ccf2), to(#2f80ed));
-  background: -webkit-linear-gradient(right, #56ccf2, #2f80ed);
-  background: -o-linear-gradient(right, #56ccf2, #2f80ed);
-  background: linear-gradient(to left, #56ccf2, #2f80ed);
+  background: -webkit-gradient(linear, left top, right top, from(#5884e9), to(#2fbfde));
+  background: -webkit-linear-gradient(left, #5884e9, #2fbfde);
+  background: -o-linear-gradient(left, #5884e9, #2fbfde);
+  background: linear-gradient(to right, #5884e9, #2fbfde);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -533,6 +569,10 @@ body:not(.loaded) .has-animation {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
+
+.projects .project-link:hover {
+  -webkit-filter: grayscale(0.6);
+          filter: grayscale(0.6); }
 
 .projects .project-link:hover::before {
   opacity: 1; }

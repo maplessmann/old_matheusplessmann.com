@@ -1,50 +1,3 @@
-// Carrega as animações uma após a outra em todos os elementos que possuem animação
-$an-duration-1: .8s
-$an-duration-2: 1s
-$an-duration-3: 1s
-$an-duration-4: 1s
-
-$an-delay-1: 0s
-$an-delay-2: $an-delay-1 + $an-duration-1 * .6
-$an-delay-3: $an-delay-2 + $an-duration-2 * .6
-$an-delay-4: $an-delay-3 + $an-duration-3 * .6
-
-@each $item, $duration, $delay in ('fixed', $an-duration-1, $an-delay-1), ('logo', $an-duration-2, $an-delay-2), ('title', $an-duration-3, $an-delay-3), ('social', $an-duration-4, $an-delay-4)
-    body .header-#{$item}
-        animation-duration: $duration
-        animation-delay: $delay
-        animation-fill-mode: forwards
-
-.header-fixed
-    // cubic-bezier(0.85, 0, 0.57, 1)
-    // cubic-bezier(0.79, 0.10, 0.59, 0.93)
-    animation-name: slideRight
-    animation-timing-function: cubic-bezier(0.94, 0.01, 0.65, 1)
-
-.header-logo
-    animation-name: slideUp
-    animation-timing-function: ease
-
-.header-title
-    animation-name: focus
-    animation-timing-function: ease-out
-
-.header-social
-    animation-name: focus
-    animation-timing-function: ease-out
-
-
-// Esconde os elementos até eles receberem a animação
-.has-animation
-    opacity: 0
-
-// Previne as animações de iniciarem antes de carregar a página (classe adicionada e removida pelo js/main.js)
-body:not(.loaded)
-    .has-animation
-        animation: none
-
-
-
 @keyframes slideRight
     0%
         transform: translateX(-100%)
@@ -53,12 +6,20 @@ body:not(.loaded)
         transform: translateX(0)
         opacity: 1
 
+
+@keyframes slideRight2
+    0%
+        transform: translateX(-2rem)
+        opacity: 0
+    100%
+        transform: translateX(0)
+        opacity: 1
+
 @keyframes slideUp
     0%
         opacity: 0
-        transform: translateY(25%)
-    40%
-        opacity: 0
+        transform: translateY(3.5%)
+        // transform: translateY(.8rem)
     100%
         opacity: 1
         transform: translateY(0)
@@ -70,3 +31,54 @@ body:not(.loaded)
     100%
         opacity: 1
         filter: blur(0)
+
+// Carrega as animações uma após a outra em todos os elementos que possuem animação
+$an-duration-1: .8s
+$an-duration-2: .8s
+$an-duration-3: .8s
+$an-duration-4: .8s
+$an-duration-5: .6s
+$an-duration-6: .5s
+
+$an-delay-1: 0s
+$an-delay-2: $an-delay-1 + $an-duration-1 * .75
+$an-delay-3: $an-delay-2 + $an-duration-2 * .25
+$an-delay-4: $an-delay-3 + $an-duration-3 * .3
+$an-delay-5: $an-delay-4 + $an-duration-4 * .4
+$an-delay-6: $an-delay-5 + $an-duration-5 * .2
+
+@each $item, $duration, $delay in ('header-fixed', $an-duration-1, $an-delay-1), ('header-logo', $an-duration-2, $an-delay-2), ('header-title', $an-duration-3, $an-delay-3), ('header-social', $an-duration-4, $an-delay-4), ('navbar', $an-duration-5, $an-delay-5), ('section', $an-duration-6, $an-delay-6)
+    .#{$item}
+        animation-duration: $duration
+        animation-delay: $delay
+        animation-fill-mode: forwards
+
+.header-fixed
+    animation-name: slideRight
+    animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1)
+    // animation-timing-function: cubic-bezier(0.97, 0, 0.5, 0.96)
+
+.header-logo,
+.header-title,
+.header-social
+    animation-name: slideRight2
+    animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1)
+
+.section,
+.navbar
+    animation-name: slideUp
+    animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9)
+
+
+// Esconde os elementos até eles receberem a animação
+.has-animation,
+.section,
+.navbar
+    opacity: 0
+
+// Previne as animações de iniciarem antes de carregar a página (classe adicionada e removida pelo js/main.js)
+body:not(.loaded)
+    .has-animation,
+    .section,
+    .navbar
+        animation: none
