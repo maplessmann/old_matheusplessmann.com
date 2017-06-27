@@ -348,9 +348,9 @@ body:not(.loaded) .navbar {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   max-width: 100%;
-  padding: 2rem;
-  background-color: #fff;
-  background-image: url("../images/header-bg-2.jpg");
+  padding: 3rem 2rem;
+  background-color: #eee;
+  background-image: url("../images/_header-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -370,6 +370,11 @@ body:not(.loaded) .navbar {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.header-image {
+  width: 7rem;
+  border-radius: 50%;
+  border: 3px solid white; }
+
 .header-logo {
   -webkit-transition: 1s;
   -o-transition: 1s;
@@ -377,10 +382,6 @@ body:not(.loaded) .navbar {
 
 .header-logo-img {
   width: 4rem; }
-
-.header-logo:hover {
-  -webkit-filter: blur(0.5rem);
-          filter: blur(0.5rem); }
 
 .header-title {
   max-width: 17rem;
@@ -403,7 +404,7 @@ body:not(.loaded) .navbar {
           filter: blur(0.2rem); }
 
 .header-social-link {
-  color: #eee !important;
+  color: #fff !important;
   font-size: 1.5rem;
   -webkit-transition: .3s ease;
   -o-transition: .3s ease;

@@ -40,13 +40,19 @@
     &-fixed
         flex-basis: 100%
         max-width: 100%
-        padding: 2rem
-        +background-image('../images/header-bg-2.jpg', #fff)
+        padding: 3rem 2rem
+        +background-image('../images/_header-bg.jpg', #eee)
+        // background-image: linear-gradient(to bottom right, transparentize(#5EFCE8, .5), transparentize(#736EFE, .5)), url('../images/kimon-maritz-181128.jpg')
         display: flex
         flex-wrap: wrap
         align-items: center
         flex-direction: column
         justify-content: space-between
+
+    &-image
+        width: 7rem
+        border-radius: 50%
+        border: 3px solid rgba(255,255,255,1)
 
     &-logo
         transition: 1s
@@ -54,7 +60,7 @@
         &-img
             width: 4rem
 
-        &:hover
+        // &:hover
             filter: blur(.5rem)
 
     &-title
@@ -79,7 +85,7 @@
             filter: blur(.2rem)
 
         &-link
-            color: #eee !important
+            color: #fff !important
             font-size: 1.5rem
             transition: .3s ease
 

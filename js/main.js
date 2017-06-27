@@ -3,11 +3,11 @@
  */
 (function() {
 
-    var $window = $(window),
-    $body = $('body');
+    var $window = $(window);
+    var $body = $('body');
 
     $window.on('load', function() {
-        window.setTimeout(function() {
+        setTimeout(function() {
             $body.addClass('loaded');
         }, 100);
     });
@@ -15,32 +15,25 @@
 })();
 
 
-/*
-var on = addEventListener;
-    $ = function(q) {
-        return document.querySelector(q)
-    },
-    $$ = function(q) {
-        return document.querySelectorAll(q)
-    },
-    $body = document.body
-
-on('load', function() {
-    setTimeout(function() {
-        $body.className = $body.className.replace(/\bis-loading\b/, 'is-playing');
-        setTimeout(function() {
-            $body.className = $body.className.replace(/\bis-playing\b/, 'is-ready');
-        }, 3500);
-    }, 100);
-});
-
-*/
+// (function() {
+//     var on = addEventListener;
+//     $ = function(q) {
+//         return document.querySelector(q)
+//     },
+//     $body = document.body
+//
+//     on('load', function() {
+//         setTimeout(function() {
+//             $body.className = $body.className += ' loaded';
+//         }, 500);
+//     });
+// })();
 
 
 /*
  * Adiciona ou remove a classe 'active' da label, conforme o estado do input
  */
-$('.input-field input, .input-field textarea').focusout(function() {
+$('.input-field input, .input-field textarea').on('focusout', function() {
     var thisElem = $(this);
     var textValue = thisElem.val();
 
