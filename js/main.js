@@ -46,7 +46,7 @@ $('.input-field input, .input-field textarea').on('focusout', function() {
 
 
 /*
- * Smooth Scroll
+ * Navega suavemente até o elemento de id referenciado no href de um link interno, quando o mesmo for clicado
  */
 $('a[href*="#"]:not([href="#"])').on('click', function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -55,7 +55,7 @@ $('a[href*="#"]:not([href="#"])').on('click', function() {
         if (target.length) {
             $('html, body').animate({
                 scrollTop: target.offset().top
-            }, 700);
+            }, 500);
             return false;
         }
     }
