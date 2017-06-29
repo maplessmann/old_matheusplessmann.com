@@ -9,8 +9,8 @@ html {
           box-sizing: inherit; }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #5d5d5d;
+  font-family: 'Raleway', sans-serif;
+  color: #909090;
   font-size: .95rem; }
 
 figure {
@@ -351,7 +351,7 @@ body:not(.loaded) .navbar {
   max-width: 100%;
   padding: 3rem 2rem;
   background-color: #4b85c4;
-  background-image: url("../images/_header-bg.jpg");
+  background-image: url("../images/_header-bg-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -385,11 +385,12 @@ body:not(.loaded) .navbar {
   width: 4rem; }
 
 .header-title {
-  max-width: 21rem;
+  max-width: 23rem;
   color: #fff;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 500;
+  letter-spacing: .6px;
   line-height: 1.1;
   margin: 3rem 0; }
 
@@ -519,6 +520,7 @@ body:not(.loaded) .navbar {
   margin: 0 0 1.5rem; }
 
 .title {
+  color: #5d5d5d;
   font-size: 1.5rem;
   font-weight: 700; }
 
