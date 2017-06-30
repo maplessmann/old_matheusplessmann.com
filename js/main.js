@@ -15,25 +15,10 @@
 })();
 
 
-// (function() {
-//     var on = addEventListener;
-//     $ = function(q) {
-//         return document.querySelector(q)
-//     },
-//     $body = document.body
-//
-//     on('load', function() {
-//         setTimeout(function() {
-//             $body.className = $body.className += ' loaded';
-//         }, 500);
-//     });
-// })();
-
-
 /*
  * Adiciona ou remove a classe 'active' da label, conforme o estado do input
  */
-$('.input-field input, .input-field textarea').on('focusout', function() {
+$('.input-field').on('focusout', 'input, textarea', function() {
     var thisElem = $(this);
     var textValue = thisElem.val();
 

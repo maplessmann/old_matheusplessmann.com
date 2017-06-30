@@ -25,6 +25,9 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1.5rem 0;
   line-height: 1.6; }
 
+strong {
+  font-weight: 700; }
+
 a {
   text-decoration: none; }
 
@@ -57,8 +60,9 @@ a:hover {
   -webkit-box-shadow: 0px 8px 15px -6px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 8px 15px -6px rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.6);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: .8rem;
+  font-weight: 500;
   padding: .5rem 1rem;
   -webkit-animation: slideUpTooltip .8s;
           animation: slideUpTooltip .8s; }
