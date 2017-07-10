@@ -28,9 +28,9 @@ block content
             
             section#about.section.myself
                 h2.title Um pouco sobre mim
-                p Eu sou um Desenvolvedor Front-end, empenhado em criar interfaces web responsivas, sempre focadas na experiência do usuário, mantendo um código limpo, semântico e organizado.
+                p Sou um desenvolvedor Front-End amante da tecnologia e do potencial que ela tem de facilitar as nossas vidas. Tenho um mindset focado em criar uma boa experiência do usuário com a aplicação, por isso eu amo criar interfaces interativas e fluidas, mantendo sempre um código limpo, semântico e escalável.
                 
-                p Desde que descobri esse fantástico mundo de desenvolvimento, não parei de ler, ouvir podcasts e devorar conteúdos sobre front-end, apenas porque eu amo, amo criar interfaces, amo ficar me perguntando qual será a reação do usuário quando interagir com tal funcionalidade... E o mais legal disso tudo é você dar vida ao layout, é ver uma ideia sendo aplicada e funcionando, da maneira que foi projetada. 
+                p Desde que descobri esse fantástico mundo de desenvolvimento, não parei de ler, ouvir podcasts e devorar conteúdos sobre front-end, apenas porque eu amo, amo criar interfaces, amo ficar me perguntando qual será a reação do usuário quando interagir com os componentes da tela. 
                 
                 p
                     | Minhas 
@@ -47,12 +47,12 @@ block content
                     | Ao longo desses anos eu já desenvolvi diversos sites e já criei alguns projetos bem legais também. 
                     | Esses são alguns dos trabalhos que eu fiz recentemente:
                 .row.projects-row
-                    +projectItem('http://triadedaprodutividade.com/mindpro-triad', 'images/project-mindpro.png', 'Evento Mindpro', 'Texto', 'Visitar site')
-                    +projectItem('http://triadedaprodutividade.com/plataforma', 'images/project-plataforma-tpr.png', 'Plataforma de cursos', 'Texto', 'Visitar site')
-                    +projectItem('http://triadprime.com.br/inscricao-pf', 'images/project-triad-prime.png', 'Triad Prime', 'Texto', 'Visitar site')
-                    +projectItem('#', 'images/project-1.jpg', 'Foco em Pediatria', 'Texto', 'Visitar site')
+                    +projectItem('http://triadedaprodutividade.com/mindpro-triad', 'images/project-mindpro.png', 'Evento Mindpro', 'Site de divulgação do evento Mindpro', 'Visitar site')
+                    +projectItem('http://triadedaprodutividade.com/plataforma', 'images/project-plataforma-tpr.png', 'Plataforma de cursos', 'Plataforma do curso Tríade da Produtividade', 'Ver demonstração')
+                    +projectItem('http://triadprime.com.br/inscricao-pf', 'images/project-triad-prime.png', 'Triad Prime', 'Página de vendas da plataforma Triad Prime', 'Visitar site')
+                    +projectItem('http://saudavelsemneura.com.br', 'images/project-saudavel-sem-neura.jpg', 'Saudável sem neura', 'Página de vendas do curso Saudável sem Neura', 'Visitar site')
                 
-                p
+                //- p
                     | Se você quer ver como é o meu código, da conferida lá no meu
                     |
                     a.link(href='https://github.com/maplessmann') Github
@@ -64,7 +64,7 @@ block content
                     
             section#contact.section.contact
                 h2.title Entre em contato
-                p Se você se interessou pelo meu trabalho e quer falar comigo, me envie uma mensagem pelo formulário abaixo ou entre em contato pelos outros meios.
+                p Quer entrar em contato comigo? Você pode me enviar um e-mail pelo formulário abaixo, me chamar no telegram ou mandar uma mensagem para o meu e-mail.
                 .row
                     .col-xs-12.col-md-7
                         form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
@@ -85,12 +85,12 @@ block content
                             i.fa.fa-envelope
                             |
                             |
-                            a.link(href='mailto:maplessmann@gmail.com', target='_blank') Me mande um e-mail
+                            a.link(href='mailto:maplessmann@gmail.com', target='_blank', data-tooltip='Me manda um e-mail') maplessmann@gmail.com
                         p
                             i.fa.fa-telegram
                             |
                             |
-                            a.link(href='https://telegram.me/maplessmann', target='_blank') Me chame no Telegram
+                            a.link(href='https://telegram.me/maplessmann', target='_blank', data-tooltip='Me chama lá no telegram :)') @maplessmann
 
 
             footer.footer
