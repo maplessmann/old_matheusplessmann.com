@@ -1,4 +1,4 @@
-@keyframes slideRight
+@keyframes slideHeader
     0%
         transform: translateX(-100%)
         opacity: 0
@@ -6,10 +6,9 @@
         transform: translateX(0)
         opacity: 1
 
-
-@keyframes slideRight2
+@keyframes slideRight
     0%
-        transform: translateX(-2rem)
+        transform: translateX(-6rem)
         opacity: 0
     100%
         transform: translateX(0)
@@ -19,7 +18,6 @@
     0%
         opacity: 0
         transform: translateY(3.5%)
-        // transform: translateY(.8rem)
     100%
         opacity: 1
         transform: translateY(0)
@@ -32,19 +30,22 @@
         opacity: 1
         filter: blur(0)
 
-// Carrega as animações uma após a outra em todos os elementos que possuem animação
-$an-duration-1: .8s
+/* Carrega as animações uma após a outra em todos os elementos que possuem animação
+
+// Duração
+$an-duration-1: 1s
 $an-duration-2: .8s
 $an-duration-3: .8s
 $an-duration-4: .8s
 $an-duration-5: .6s
 $an-duration-6: .5s
 
+// Delay
 $an-delay-1: 0s
-$an-delay-2: $an-delay-1 + $an-duration-1 * .75
+$an-delay-2: $an-delay-1 + $an-duration-1 * .65
 $an-delay-3: $an-delay-2 + $an-duration-2 * .25
-$an-delay-4: $an-delay-3 + $an-duration-3 * .3
-$an-delay-5: $an-delay-4 + $an-duration-4 * .4
+$an-delay-4: $an-delay-3 + $an-duration-3 * .2
+$an-delay-5: $an-delay-4 + $an-duration-4 * .3
 $an-delay-6: $an-delay-5 + $an-duration-5 * .2
 
 @each $item, $duration, $delay in ('header-fixed', $an-duration-1, $an-delay-1), ('header-logo', $an-duration-2, $an-delay-2), ('header-title', $an-duration-3, $an-delay-3), ('header-social', $an-duration-4, $an-delay-4), ('navbar', $an-duration-5, $an-delay-5), ('section', $an-duration-6, $an-delay-6)
@@ -54,29 +55,31 @@ $an-delay-6: $an-delay-5 + $an-duration-5 * .2
         animation-fill-mode: forwards
 
 .header-fixed
-    animation-name: slideRight
-    animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1)
-    // animation-timing-function: cubic-bezier(0.97, 0, 0.5, 0.96)
+    animation-name: slideHeader
+    animation-timing-function: cubic-bezier(.8, 0, .2, 1)
 
+
+/*
 .header-logo,
 .header-title,
 .header-social
-    animation-name: slideRight2
-    animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1)
+    animation-name: slideRight
+    animation-timing-function: cubic-bezier(.2, 0, .1, 1)
 
+
+/* Adiciona animação em todas as sections e na navbar
 .section,
 .navbar
     animation-name: slideUp
     animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9)
 
 
-// Esconde os elementos até eles receberem a animação
+/* Esconde os elementos até eles receberem a animação
 .has-animation,
-.section,
-.navbar
+.section
     opacity: 0
 
-// Previne as animações de iniciarem antes de carregar a página (classe adicionada e removida pelo js/main.js)
+/* Previne as animações de iniciarem antes de carregar a página (classe adicionada e removida pelo js/main.js)
 body:not(.loaded)
     .has-animation,
     .section,

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -194,10 +195,30 @@ textarea:focus {
       -ms-transform: translateY(-180%);
           transform: translateY(-180%); }
 
-@-webkit-keyframes slideRight {
+@-webkit-keyframes slideHeader {
   0% {
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slideHeader {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@-webkit-keyframes slideRight {
+  0% {
+    -webkit-transform: translateX(-6rem);
+            transform: translateX(-6rem);
     opacity: 0; }
   100% {
     -webkit-transform: translateX(0);
@@ -206,28 +227,8 @@ textarea:focus {
 
 @keyframes slideRight {
   0% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1; } }
-
-@-webkit-keyframes slideRight2 {
-  0% {
-    -webkit-transform: translateX(-2rem);
-            transform: translateX(-2rem);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1; } }
-
-@keyframes slideRight2 {
-  0% {
-    -webkit-transform: translateX(-2rem);
-            transform: translateX(-2rem);
+    -webkit-transform: translateX(-6rem);
+            transform: translateX(-6rem);
     opacity: 0; }
   100% {
     -webkit-transform: translateX(0);
@@ -274,9 +275,10 @@ textarea:focus {
     -webkit-filter: blur(0);
             filter: blur(0); } }
 
+/* Carrega as animações uma após a outra em todos os elementos que possuem animação */
 .header-fixed {
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
@@ -285,57 +287,59 @@ textarea:focus {
 .header-logo {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 .header-title {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 0.85s;
+          animation-delay: 0.85s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 .header-social {
   -webkit-animation-duration: 0.8s;
           animation-duration: 0.8s;
-  -webkit-animation-delay: 1.04s;
-          animation-delay: 1.04s;
+  -webkit-animation-delay: 1.01s;
+          animation-delay: 1.01s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 .navbar {
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
-  -webkit-animation-delay: 1.36s;
-          animation-delay: 1.36s;
+  -webkit-animation-delay: 1.25s;
+          animation-delay: 1.25s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 .section {
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  -webkit-animation-delay: 1.48s;
-          animation-delay: 1.48s;
+  -webkit-animation-delay: 1.37s;
+          animation-delay: 1.37s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
 
 .header-fixed {
-  -webkit-animation-name: slideRight;
-          animation-name: slideRight;
-  -webkit-animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1);
-          animation-timing-function: cubic-bezier(0.49, -0.08, 0.18, 1); }
+  -webkit-animation-name: slideHeader;
+          animation-name: slideHeader;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+          animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1); }
 
+/* */
 .header-logo,
 .header-title,
 .header-social {
-  -webkit-animation-name: slideRight2;
-          animation-name: slideRight2;
-  -webkit-animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1);
-          animation-timing-function: cubic-bezier(0.02, 0.07, 0.28, 1); }
+  -webkit-animation-name: slideRight;
+          animation-name: slideRight;
+  -webkit-animation-timing-function: cubic-bezier(0.2, 0, 0.1, 1);
+          animation-timing-function: cubic-bezier(0.2, 0, 0.1, 1); }
 
+/* Adiciona animação em todas as sections e na navbar */
 .section,
 .navbar {
   -webkit-animation-name: slideUp;
@@ -343,11 +347,12 @@ textarea:focus {
   -webkit-animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9);
           animation-timing-function: cubic-bezier(0, 0, 0.52, 0.9); }
 
+/* Esconde os elementos até eles receberem a animação */
 .has-animation,
-.section,
-.navbar {
+.section {
   opacity: 0; }
 
+/* Previne as animações de iniciarem antes de carregar a página (classe adicionada e removida pelo js/main.js) */
 body:not(.loaded) .has-animation,
 body:not(.loaded) .section,
 body:not(.loaded) .navbar {
@@ -560,10 +565,10 @@ body:not(.loaded) .navbar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(60%, rgba(72, 76, 97, 0.7)), to(rgba(72, 76, 97, 0.3)));
-  background: -webkit-linear-gradient(bottom, rgba(72, 76, 97, 0.7) 60%, rgba(72, 76, 97, 0.3) 100%);
-  background: -o-linear-gradient(bottom, rgba(72, 76, 97, 0.7) 60%, rgba(72, 76, 97, 0.3) 100%);
-  background: linear-gradient(to top, rgba(72, 76, 97, 0.7) 60%, rgba(72, 76, 97, 0.3) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, rgba(42, 45, 62, 0.85)), to(rgba(67, 72, 97, 0.54)));
+  background: -webkit-linear-gradient(bottom, rgba(42, 45, 62, 0.85) 50%, rgba(67, 72, 97, 0.54) 100%);
+  background: -o-linear-gradient(bottom, rgba(42, 45, 62, 0.85) 50%, rgba(67, 72, 97, 0.54) 100%);
+  background: linear-gradient(to top, rgba(42, 45, 62, 0.85) 50%, rgba(67, 72, 97, 0.54) 100%);
   -webkit-box-shadow: inset 0 0 95px rgba(0, 0, 0, 0.2);
           box-shadow: inset 0 0 95px rgba(0, 0, 0, 0.2);
   border-radius: .1rem;
@@ -576,33 +581,32 @@ body:not(.loaded) .navbar {
   content: attr(data-button);
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
-  -webkit-transform: translate3D(0, -21%, 0);
-      -ms-transform: translate3D(0, -21%, 0);
-          transform: translate3D(0, -21%, 0);
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -21%, 0);
+          transform: translate3d(-50%, -21%, 0);
   color: #fff;
-  font-size: .7rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: .77rem;
   font-weight: 500;
   text-align: center;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   letter-spacing: 2px;
   word-spacing: .2rem;
   opacity: 0;
-  -webkit-transition: opacity .2s ease, -webkit-transform .4s ease;
-  transition: opacity .2s ease, -webkit-transform .4s ease;
-  -o-transition: transform .4s ease, opacity .2s ease;
-  transition: transform .4s ease, opacity .2s ease;
-  transition: transform .4s ease, opacity .2s ease, -webkit-transform .4s ease; }
+  -webkit-transition: opacity .2s ease, -webkit-transform .4s ease, -webkit-box-shadow .3s ease .2s;
+  transition: opacity .2s ease, -webkit-transform .4s ease, -webkit-box-shadow .3s ease .2s;
+  -o-transition: transform .4s ease, opacity .2s ease, box-shadow .3s ease .2s;
+  transition: transform .4s ease, opacity .2s ease, box-shadow .3s ease .2s;
+  transition: transform .4s ease, opacity .2s ease, box-shadow .3s ease .2s, -webkit-transform .4s ease, -webkit-box-shadow .3s ease .2s; }
 
 .projects .project-link:hover::before, .projects .project-link:hover::after {
   opacity: 1; }
 
 .projects .project-link:hover::after {
-  -webkit-transform: translate3D(0, -50%, 0);
-      -ms-transform: translate3D(0, -50%, 0);
-          transform: translate3D(0, -50%, 0); }
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  -webkit-box-shadow: inset 0 -6px 0 0 rgba(61, 138, 180, 0.75);
+          box-shadow: inset 0 -6px 0 0 rgba(61, 138, 180, 0.75); }
 
 .projects .project-title {
   font-size: 1rem;
