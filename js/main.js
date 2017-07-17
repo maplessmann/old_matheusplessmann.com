@@ -1,5 +1,5 @@
 /*
- * Adiciona a classe 'loaded' após a página ter sido carregada, para iniciar as animações
+ * Adiciona a classe 'loaded' na tag body após a página ter sido carregada, para iniciar as animações
  */
 (function() {
 
