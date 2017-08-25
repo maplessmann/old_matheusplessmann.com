@@ -16,8 +16,6 @@ block content
     main.content
         .container
             nav.navbar.has-animation
-                //- a.header-logo
-                    img.header-logo-image(src='images/logo-matheus-plessmann.svg')
                 ul.navbar-menu.center-xs.end-sm
                     li.navbar-menu-item
                         a.navbar-menu-link(href='#about') Sobre mim
@@ -38,7 +36,7 @@ block content
                     | 
                     | são: HTML5, CSS3, JavaScript, Sass, PugJS, Gulp, jQuery, Git e NPM.
                     br
-                    | NodeJS, ReactJS / VueJS e Elm são os meus próximos passos.
+                    | Atualmente estou estudando e focado em dominar ReactJS e ES2015.
                 
                 
             section#projects.section.projects
@@ -51,15 +49,6 @@ block content
                     +projectItem('http://triadedaprodutividade.com/plataforma', 'images/project-plataforma-tpr.png', 'Plataforma de cursos', 'Plataforma do curso Tríade da Produtividade', 'Ver demonstração')
                     +projectItem('http://matheusplessmann.com/404/', 'images/project-404.png', 'Página 404', 'Uma página simples, porém bem divertida e bonita, para retornar o famoso erro 404 para o usuário.', 'Visitar página')
                     +projectItem('http://saudavelsemneura.com.br', 'images/project-saudavel-sem-neura.png', 'Saudável sem neura', 'Página de vendas do curso Saudável sem Neura', 'Visitar site')
-                
-                //- p
-                    | Se você quer ver como é o meu código, da conferida lá no meu
-                    |
-                    a.link(href='https://github.com/maplessmann') Github
-                    |
-                    | ou confere as minhas pens lá no
-                    |
-                    a.link(href='https://codepen.io/maplessmann/') Codepen
                     
                     
             section#contact.section.contact
@@ -67,7 +56,7 @@ block content
                 p Quer entrar em contato comigo? Você pode me enviar um e-mail pelo formulário abaixo, me chamar no telegram ou mandar uma mensagem para o meu e-mail.
                 .row
                     .col-xs-12.col-md-7
-                        form(action='https://formspree.io/maplessmann@gmail.com', method='POST')
+                        form.form-contact(action='https://formspree.io/maplessmann@gmail.com', method='POST')
                             .input-field
                                 input(type='text', name='name')
                                 label(for='identificador') Nome
@@ -85,12 +74,12 @@ block content
                             i.fa.fa-envelope
                             |
                             |
-                            a.link(href='mailto:maplessmann@gmail.com', target='_blank', data-tooltip='Me manda um e-mail') maplessmann@gmail.com
+                            a.link(href='mailto:maplessmann@gmail.com', target='_blank') maplessmann@gmail.com
                         p
                             i.fa.fa-telegram
                             |
                             |
-                            a.link(href='https://telegram.me/maplessmann', target='_blank', data-tooltip='Me chama lá no telegram :)') @maplessmann
+                            a.link(href='https://telegram.me/maplessmann', target='_blank') @maplessmann
 
 
             footer.footer
